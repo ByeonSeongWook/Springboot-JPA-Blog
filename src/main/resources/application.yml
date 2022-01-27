@@ -1,0 +1,24 @@
+# .properties -> .yml 로 변경
+# yml 은 json이랑 파일 형식이 똑같다.
+# 모든 스프링에 대한 설정을 다 할 수 있다. --> spring 은 .xml에 나눠서 설정	했지만 spring 부트는 application.yml에 모든 설정을 다 할 수 있다.
+# .properties 를 쓰지 않는 이유는 "."으로 하나씩 다 설정을 해줘야 하는데 
+# .yml은 ":" 으로 들여쓰기를 해서 중복되는 코드를 제거, 가독성이 좋아진다.
+
+### .properties
+# spring.datasource.password=1234
+# spring.datasource.username=byeon
+
+### .yml
+# spring:
+#		#datasource:
+#			#password: 1234
+#			#username: byeon	
+
+# 데이터 베이스 연결
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul
+    username: byeon
+    password: 12341234
+
